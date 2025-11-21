@@ -1,0 +1,68 @@
+baseURL: "https://HankStat.github.io/"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+title: "Hank Chen"
+pagination:
+  pagerSize: 5
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Hank Chen"
+  description: "Master of Computer Science @ UIUC"
+  keywords: [Distributed Systems, Machine Learning, Go, Python]
+  author: "Hank Chen"
+  # images: ["<link to your image>"]
+  dateFormat: "January 2, 2006"
+  defaultTheme: auto
+  
+  profileMode:
+    enabled: true
+    title: "Hi, I'm Hank 🗣️"
+    subtitle: "MCS @ UIUC"
+    imageUrl: "https://github.com/HankStat.png"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: "Hank Chen"
+    buttons:
+      - name: Resume
+        url: "/Hank_Chen_Resume_intern_1118.pdf"
+      - name: Projects
+        url: "/projects"
+      - name: Blog
+        url: "/posts"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/HankStat"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/yong-han-chen/"
+    - name: email
+      url: "mailto:hank96015@gmail.com"
+
+menu:
+  main:
+    - identifier: posts
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
