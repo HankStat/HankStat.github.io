@@ -61,6 +61,7 @@ params:
   comments: true 
   giscus:
     repo: "HankStat/HankStat.github.io"
+    repoID: "R_kgDOQaJC8Q"
     category: "General"
     categoryID: "DIC_kwDOQaJC8c4CyEp2"
     mapping: "pathname"
