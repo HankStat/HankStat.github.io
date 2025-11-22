@@ -38,7 +38,7 @@ params:
     imageTitle: "Hank Chen"
     buttons:
       - name: Resume
-        url: "/Hank_Chen_Resume_intern_1118.pdf"
+        url: "/Hank_Chen_SWE_Resume.pdf"
       - name: Projects
         url: "/projects"
       - name: Blog
@@ -52,17 +52,43 @@ params:
     - name: email
       url: "mailto:hank96015@gmail.com"
 
+  assets:
+    favicon: "https://github.com/HankStat.png"
+    favicon16x16: "https://github.com/HankStat.png"
+    favicon32x32: "https://github.com/HankStat.png"
+    apple_touch_icon: "https://github.com/HankStat.png"
+
+  comments: true 
+  giscus:
+    repo: "HankStat/HankStat.github.io"
+    category: "General"
+    categoryID: "DIC_kwDOQaJC8c4CyEp2"
+    mapping: "pathname"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    theme: "preferred_color_scheme"
+    lang: "en"
+
 menu:
   main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 10
     - identifier: posts
       name: Blog
       url: /posts/
-      weight: 10
+      weight: 20
     - identifier: projects
       name: Projects
       url: /projects/
-      weight: 20
+      weight: 30
     - identifier: search
       name: Search
       url: /search/
-      weight: 30
+      weight: 40
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

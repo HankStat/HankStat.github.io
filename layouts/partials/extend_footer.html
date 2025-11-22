@@ -1,0 +1,68 @@
+<div class="fixed-social-icons">
+    {{- range site.Params.socialIcons }}
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer me" title="{{ .name | title }}">
+        {{- partial "svg.html" . }}
+    </a>
+    {{- end }}
+</div>
+
+<style>
+    .profile .social-icons {
+        display: none !important;
+    }
+
+    .fixed-social-icons {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 999;
+        
+        background: var(--entry);
+        border: 1px solid var(--border);
+        padding: 12px 10px;
+        border-radius: 25px; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .fixed-social-icons a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        transition: transform 0.2s;
+    }
+
+    .fixed-social-icons a:hover {
+        transform: scale(1.2);
+        color: var(--secondary);
+    }
+
+    .fixed-social-icons svg {
+        width: 24px;
+        height: 24px;
+    }
+    @media (max-width: 768px) {
+        .fixed-social-icons {
+            position: static;
+            flex-direction: row;
+            justify-content: center;
+            
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            
+            margin-top: 20px;
+            padding-bottom: 40px;
+            gap: 30px;
+        }
+        
+        .fixed-social-icons svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+</style>
